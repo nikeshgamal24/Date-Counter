@@ -23,13 +23,14 @@ function Counter() {
   return (
     <>
       <div className="wrap-container">
-        <button className="reduce-step" onClick={() => setStep((step)=>step - 1)}>
+        <input type="range" min="1" and max="10" value={step} onChange={(e)=>setStep(Number(e.target.value))}/><span style={{fontSize:"1.4rem"}}>{step}</span>
+        {/* <button className="reduce-step" onClick={() => setStep((step)=>step - 1)}>
           -
         </button>
         <span className="step-count">Step:{step}</span>
         <button className="increase-step" onClick={()=> setStep((step)=>step + 1)}>
           +
-        </button>
+        </button> */}
       </div>
       <div className="wrap-container">
         <button
@@ -38,7 +39,8 @@ function Counter() {
         >
           -
         </button>
-        <span className="counter-count">Count:{count}</span>
+        <input type="number" value={count} onChange={(e=>setCount(Number(e.target.value)))}/>
+        {/* <span className="counter-count">Count:{count}</span> */}
         <button
           className="increase-count"
           onClick={() => setCount((count)=>count + step)}
