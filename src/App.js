@@ -40,7 +40,7 @@ function Counter() {
           -
         </button>
         <input type="number" value={count} onChange={(e=>setCount(Number(e.target.value)))}/>
-        {/* <span className="counter-count">Count:{count}</span> */}
+        {/* <span className="counter-count">Count:/{count}</span> */}
         <button
           className="increase-count"
           onClick={() => setCount((count)=>count + step)}
